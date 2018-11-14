@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- libraries -->
+  <link type="text/css" rel="stylesheet" href="./lib/tachyons-4.9.1.min.css" />
+  <script type="text/javascript" src="./lib/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./lib/paper-full-v0.11.5.min.js"></script>
+  <script type="text/javascript" src="./lib/socket.io-v2.1.1.slim.js"></script>
+  <script type="text/javascript" src="./lib/util.js"></script>
+  <!-- code -->
+  <script type="text/paperscript" src="./paperscript.js" canvas="screen"></script>
+  <style>
+    canvas#screen {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="screen" resize></canvas>
+</body>
+
+</html>
