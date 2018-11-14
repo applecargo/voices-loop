@@ -64,19 +64,18 @@ Promise.all([
     //// simply relaying messages to apps.
 
     // to puredata
-    udp_pd.send({
-      address: "/key",
-      args: [{
-        type: "f",
-        value: key.seat
-      }, {
-        type: "f",
-        value: key.id
-      }, {
-        type: "f",
-        value: key.value
-      }]
-    });
+    if (key.value == 1) {
+      udp_pd.send({
+        address: "/voice",
+        args: [{
+          type: "f",
+          value: key.seat
+        }, {
+          type: "f",
+          value: key.id + 1
+        }]
+      });
+    }
 
     // // to supercollider
     // udp_sc.send({
